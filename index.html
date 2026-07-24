@@ -107,7 +107,7 @@
   @media(max-width:480px){
     .btn-admin{position:static;margin-top:12px;display:inline-block;}
   }
-
+ 
   /* trilha de progresso */
   .trilha{
     display:flex;
@@ -136,12 +136,12 @@
   .parada.ativa .rotulo{color:var(--verde-escuro);font-weight:600;}
   .linha{flex:1 1 auto;height:2px;background:var(--borda);position:relative;top:13px;margin:0 2px;}
   .linha.feita{background:var(--verde);}
-
+ 
   main{padding:22px 24px 44px;}
   .passo{display:none;}
   .passo.ativo{display:block;animation:surgir .25s ease;}
   @keyframes surgir{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
-
+ 
   .cartao{
     background:var(--superficie);
     border:1px solid var(--borda);
@@ -149,7 +149,7 @@
     box-shadow:var(--sombra);
     padding:22px 22px 24px;
   }
-
+ 
   .rotulo-secao{
     font-family:'Space Grotesk',sans-serif;
     font-size:18px;
@@ -158,7 +158,7 @@
     color:var(--verde-escuro);
   }
   .ajuda-secao{font-size:13.5px;color:var(--texto-suave);margin:0 0 20px;line-height:1.55;}
-
+ 
   .campo{margin-bottom:16px;}
   .campo label{
     display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--tinta);
@@ -173,14 +173,14 @@
   .campo select:disabled{background:#F0EFEA;color:var(--texto-suave);cursor:not-allowed;}
   .linha-dupla{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
   @media(max-width:480px){.linha-dupla{grid-template-columns:1fr;}}
-
+ 
   .aviso-erro{
     background:var(--erro-bg);color:var(--erro);
     padding:10px 12px;border-radius:var(--raio-sm);font-size:13px;margin-bottom:16px;
     display:none;
   }
   .aviso-erro.mostrar{display:block;}
-
+ 
   .aviso-restricao{
     background:var(--verde-suave);
     border:1.5px solid var(--verde);
@@ -220,7 +220,7 @@
     cursor:pointer;
   }
   #erroTermo{margin-top:12px;}
-
+ 
   .acoes-mapa{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;}
   .acoes-mapa input[type=text]{flex:1;min-width:160px;padding:10px 13px;border:1.5px solid var(--borda);border-radius:var(--raio-sm);font-size:14px;font-family:inherit;background:#FCFCFA;}
   .acoes-mapa input:focus{outline:none;border-color:var(--verde);background:#fff;}
@@ -231,6 +231,40 @@
     display:inline-flex;align-items:center;gap:6px;
   }
   .btn-mapa:hover{border-color:var(--verde);background:var(--verde-suave);}
+ 
+  .btn-gps-principal{
+    width:100%;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:var(--verde);
+    color:#fff;
+    border:none;
+    border-radius:var(--raio-sm);
+    padding:16px 18px;
+    cursor:pointer;
+    text-align:left;
+    box-shadow:0 4px 14px rgba(12,74,46,.22);
+    transition:background .15s ease, transform .1s ease;
+  }
+  .btn-gps-principal svg{flex:0 0 auto;}
+  .btn-gps-principal:hover{background:var(--verde-escuro);}
+  .btn-gps-principal:active{transform:scale(.99);}
+  .texto-btn-gps{display:flex;flex-direction:column;gap:2px;}
+  .titulo-btn-gps{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700;}
+  .selo-recomendado{font-size:11.5px;font-weight:500;color:var(--amarelo-pastel);opacity:.95;}
+ 
+  .separador-ou{
+    display:flex;align-items:center;gap:10px;
+    margin:14px 0;
+    color:var(--texto-suave);
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+  }
+  .separador-ou::before, .separador-ou::after{
+    content:'';flex:1;height:1px;background:var(--borda);
+  }
   #mapa{
     width:100%;height:320px;border-radius:var(--raio-sm);border:1.5px solid var(--borda);
     margin-bottom:12px;
@@ -240,7 +274,7 @@
     border:1.5px dashed var(--borda);border-radius:var(--raio-sm);margin-bottom:6px;
   }
   .status-pino.marcado{border-style:solid;border-color:var(--verde);color:var(--verde-escuro);background:var(--verde-suave);}
-
+ 
   .barra-botoes{display:flex;justify-content:space-between;gap:10px;margin-top:24px;}
   button.principal{
     background:var(--verde);color:#fff;border:none;
@@ -255,7 +289,7 @@
     font-weight:600;font-size:15px;padding:13px 18px;border-radius:var(--raio-sm);cursor:pointer;
   }
   button.secundario:hover{border-color:var(--verde);color:var(--verde-escuro);}
-
+ 
   .confirmacao{text-align:center;padding:14px 4px 4px;}
   .confirmacao .icone-ok{
     width:58px;height:58px;border-radius:50%;background:var(--ok-bg);color:var(--ok);
@@ -272,7 +306,7 @@
   .resumo div:last-child{border-bottom:none;}
   .resumo span:first-child{color:var(--texto-suave);}
   .resumo span:last-child{font-weight:600;text-align:right;}
-
+ 
   .caixa-pergunta{
     background:var(--verde-suave);
     border:1.5px solid var(--verde);
@@ -308,7 +342,7 @@
   }
   .btn-sim-filho:hover{background:var(--amarelo-pastel-hover);}
   .btn-sim-filho:active{transform:scale(.98);}
-
+ 
   /* área da secretaria */
   .gate{padding:56px 24px;text-align:center;}
   .gate input{
@@ -316,6 +350,22 @@
     font-size:15px;text-align:center;margin:14px 0;background:#FCFCFA;
   }
   .gate input:focus{outline:none;border-color:var(--verde);background:#fff;}
+  .campo-senha{
+    display:flex;align-items:center;gap:6px;
+    max-width:260px;margin:14px auto;
+  }
+  .campo-senha input{
+    width:100%;margin:0;max-width:none;
+  }
+  .btn-olho{
+    flex:0 0 auto;
+    display:flex;align-items:center;justify-content:center;
+    width:40px;height:40px;
+    background:#FCFCFA;border:1.5px solid var(--borda);border-radius:var(--raio-sm);
+    color:var(--texto-suave);cursor:pointer;
+    transition:border-color .15s ease,color .15s ease;
+  }
+  .btn-olho:hover{border-color:var(--verde);color:var(--verde-escuro);}
   table.registros{width:100%;border-collapse:collapse;font-size:12.5px;}
   table.registros th{
     text-align:left;background:var(--verde-escuro);color:#fff;padding:9px 10px;font-weight:600;
@@ -329,7 +379,7 @@
   .metrica .num{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;color:var(--verde-escuro);}
   .metrica .lbl{font-size:11px;color:var(--texto-suave);text-transform:uppercase;letter-spacing:.04em;margin-top:2px;}
   .rodape-admin{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;}
-
+ 
   .toast-aviso{
     position:fixed;
     top:16px;
@@ -358,7 +408,7 @@
 <body>
 <div class="app" id="app">
   <div class="faixa-institucional"></div>
-
+ 
   <header class="topo">
     <button class="btn-admin" id="btnAdmin" type="button">Área da secretaria</button>
     <div class="marca">
@@ -370,7 +420,7 @@
       </div>
     </div>
   </header>
-
+ 
   <!-- TRILHA DE PROGRESSO -->
   <div class="trilha" id="trilha" style="display:none;">
     <div class="parada ativa" data-passo="1"><div class="bolinha">1</div><div class="rotulo">Responsável</div></div>
@@ -381,45 +431,45 @@
     <div class="linha" id="linha3"></div>
     <div class="parada" data-passo="4"><div class="bolinha">4</div><div class="rotulo">Pronto</div></div>
   </div>
-
+ 
   <main id="main">
-
+ 
     <!-- INTRODUÇÃO / TERMO -->
     <section class="passo ativo" id="passoIntro">
       <div class="cartao">
         <p class="rotulo-secao">Antes de começar</p>
         <p class="ajuda-secao">Leia as informações abaixo antes de preencher o cadastro.</p>
-
+ 
         <div class="aviso-restricao">
           Este formulário deve ser preenchido <strong>somente por responsáveis de alunos que utilizam o transporte escolar público do município de Anchieta</strong>. Caso o aluno não utilize esse serviço, não é necessário preencher este cadastro.
         </div>
-
+ 
         <p class="texto-intro">Este cadastro faz parte do <strong>mapeamento das linhas do transporte escolar público</strong>, realizado pela Secretaria de Educação de Anchieta. As informações preenchidas — em especial o local marcado no mapa — serão utilizadas pela Secretaria para identificar as localidades onde os alunos residem e, a partir disso, reorganizar e melhorar os pontos de parada e as rotas do transporte escolar.</p>
-
+ 
         <p class="texto-intro">O preenchimento das informações é de <strong>inteira responsabilidade do responsável pelo aluno</strong>. Confira se os dados e a localização marcada no mapa correspondem corretamente ao endereço da residência antes de enviar.</p>
-
+ 
         <label class="opcao-concordo">
           <input type="checkbox" id="aceiteTermo">
           <span>Li as informações acima, estou ciente de que sou responsável pelos dados informados e desejo continuar.</span>
         </label>
-
+ 
         <div class="aviso-erro" id="erroTermo">É necessário marcar a caixa acima para continuar.</div>
-
+ 
         <div class="barra-botoes">
           <span></span>
           <button class="principal" id="irPasso1" type="button">Concordar e continuar</button>
         </div>
       </div>
     </section>
-
+ 
     <!-- PASSO 1: DADOS DO RESPONSÁVEL -->
     <section class="passo" id="passo1">
       <div class="cartao">
       <p class="rotulo-secao">Dados do responsável</p>
       <p class="ajuda-secao">Informe seus dados. Na próxima etapa você vai preencher os dados do aluno.</p>
-
+ 
       <div class="aviso-erro" id="erroResponsavel"></div>
-
+ 
       <div class="campo">
         <label for="nomeResp">Nome do responsável</label>
         <input type="text" id="nomeResp" placeholder="Nome completo">
@@ -428,27 +478,27 @@
         <label for="telResp">Telefone / WhatsApp <span class="opcional">(opcional)</span></label>
         <input type="tel" id="telResp" placeholder="(00) 00000-0000">
       </div>
-
+ 
       <div class="barra-botoes">
         <span></span>
         <button class="principal" id="irPasso2" type="button">Continuar</button>
       </div>
       </div>
     </section>
-
+ 
     <!-- PASSO 2: DADOS DO ALUNO -->
     <section class="passo" id="passo2">
       <div class="cartao">
       <p class="rotulo-secao">Dados do aluno</p>
       <p class="ajuda-secao">Agora informe os dados do aluno que utiliza o transporte escolar.</p>
-
+ 
       <div class="aviso-erro" id="erroAluno"></div>
-
+ 
       <div class="campo">
         <label for="nomeAluno">Nome do aluno</label>
         <input type="text" id="nomeAluno" placeholder="Nome completo do aluno">
       </div>
-
+ 
       <div class="linha-dupla">
         <div class="campo">
           <label for="escola">Escola</label>
@@ -501,14 +551,14 @@
           </select>
         </div>
       </div>
-
+ 
       <div class="campo">
         <label for="serie">Série / ano</label>
         <select id="serie" disabled>
           <option value="">Selecione o turno primeiro</option>
         </select>
       </div>
-
+ 
       <div class="linha-dupla">
         <div class="campo">
           <label for="rua">Nome da rua</label>
@@ -519,56 +569,69 @@
           <input type="text" id="numero" placeholder="Ex: 123">
         </div>
       </div>
-
+ 
       <div class="campo">
         <label for="localidade">Localidade / bairro / distrito</label>
         <input type="text" id="localidade" placeholder="Ex: Centro, Nova Anchieta, Recanto...">
       </div>
-
+ 
       <div class="campo">
         <label for="referencia">Ponto de referência <span class="opcional">(opcional)</span></label>
         <input type="text" id="referencia" placeholder="Ex: perto da igreja, mercadinho tal...">
       </div>
-
+ 
       <div class="barra-botoes">
         <button class="secundario" id="voltarPasso1" type="button">Voltar</button>
         <button class="principal" id="irPasso3" type="button">Continuar</button>
       </div>
       </div>
     </section>
-
+ 
     <!-- PASSO 3: MAPA -->
     <section class="passo" id="passo3">
       <div class="cartao">
       <p class="rotulo-secao">Onde fica a casa do aluno?</p>
-      <p class="ajuda-secao">Toque no mapa exatamente onde fica a residência. Você pode buscar o endereço ou usar sua localização atual para facilitar.</p>
-
+      <p class="ajuda-secao">Toque no mapa exatamente onde fica a residência, ou use as opções abaixo para facilitar.</p>
+ 
+      <button class="btn-gps-principal" id="btnGps" type="button">
+        <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path>
+          <circle cx="12" cy="12" r="8"></circle>
+        </svg>
+        <span class="texto-btn-gps">
+          <span class="titulo-btn-gps">Usar minha localização atual</span>
+          <span class="selo-recomendado">Recomendado — mais rápido e evita erros</span>
+        </span>
+      </button>
+ 
+      <div class="separador-ou"><span>ou</span></div>
+ 
       <div class="acoes-mapa">
         <input type="text" id="buscaEndereco" placeholder="Buscar endereço, rua ou localidade...">
         <button class="btn-mapa" id="btnBuscar" type="button">Buscar</button>
-        <button class="btn-mapa" id="btnGps" type="button">Usar minha localização</button>
       </div>
-
+ 
       <div id="mapa"></div>
       <div class="status-pino" id="statusPino">Nenhum ponto marcado ainda — toque no mapa para marcar a casa.</div>
-
+ 
       <div class="barra-botoes">
         <button class="secundario" id="voltarPasso2" type="button">Voltar</button>
         <button class="principal" id="irPasso4" type="button">Confirmar residência</button>
       </div>
       </div>
     </section>
-
+ 
     <!-- PASSO 4: CONFIRMAÇÃO -->
     <section class="passo" id="passo4">
       <div class="cartao">
       <div class="confirmacao" id="blocoResumo">
         <div class="icone-ok">✓</div>
         <h2>Cadastro enviado com sucesso</h2>
-        <p>Obrigado! Essas informações vão ajudar a Secretaria de Educação a organizar as paradas do transporte escolar o mais perto possível da casa do aluno.</p>
+        <p>Obrigado! Essas informações vão ajudar a Secretaria de Educação a organizar as rotas do transporte escolar .</p>
         <div class="resumo" id="resumoFinal"></div>
       </div>
-
+ 
       <div class="caixa-pergunta" id="perguntaMaisFilhos">
         <div class="icone-add-pessoa">
           <svg viewBox="0 0 64 64" width="46" height="46" xmlns="http://www.w3.org/2000/svg">
@@ -578,36 +641,34 @@
             <path d="M49 40v12M43 46h12" stroke="#0C4A2E" stroke-width="4" stroke-linecap="round"/>
           </svg>
         </div>
-        <p class="pergunta-texto">Você tem mais algum filho matriculado na rede que também utiliza o transporte escolar?</p>
+        <p class="pergunta-texto">Você tem mais algum aluno matriculado na rede municipal de ensino que também utiliza o transporte escolar?</p>
         <div class="barra-botoes" style="margin-top:14px;">
-          <button class="btn-nao-finalizar" id="semMaisFilhos" type="button">Não, desejo finalizar o cadastro</button>
-          <button class="btn-sim-filho" id="temMaisFilhos" type="button">Sim, cadastrar outro filho</button>
+          <button class="btn-nao-finalizar" id="semMaisFilhos" type="button">NÃO. Finalizar o cadastro</button>
+          <button class="btn-sim-filho" id="temMaisFilhos" type="button">SIM, fazer outro cadastro</button>
         </div>
       </div>
-
+ 
       <div class="confirmacao" id="blocoFinal" style="display:none;">
         <div class="icone-ok">✓</div>
         <h2>Tudo certo!</h2>
         <p>Todos os alunos foram cadastrados com sucesso. Obrigado por ajudar a Secretaria de Educação a melhorar o transporte escolar.</p>
-        <p class="texto-intro" style="text-align:center;margin-top:6px;">Deseja fazer um novo cadastro?</p>
-        <button class="principal" id="novoCadastro" type="button" style="width:100%;">Sim, fazer novo cadastro</button>
       </div>
       </div>
     </section>
-
+ 
     <!-- PASSO EXTRA: OUTRO FILHO (reaproveita responsável e localização) -->
     <section class="passo" id="passoAlunoExtra">
       <div class="cartao">
       <p class="rotulo-secao">Dados do próximo filho</p>
       <p class="ajuda-secao">Como o responsável e o endereço já foram informados, agora é só preencher os dados deste aluno.</p>
-
+ 
       <div class="aviso-erro" id="erroAlunoExtra"></div>
-
+ 
       <div class="campo">
         <label for="nomeAlunoExtra">Nome do aluno</label>
         <input type="text" id="nomeAlunoExtra" placeholder="Nome completo do aluno">
       </div>
-
+ 
       <div class="linha-dupla">
         <div class="campo">
           <label for="escolaExtra">Escola</label>
@@ -660,42 +721,48 @@
           </select>
         </div>
       </div>
-
+ 
       <div class="campo">
         <label for="serieExtra">Série / ano</label>
         <select id="serieExtra" disabled>
           <option value="">Selecione o turno primeiro</option>
         </select>
       </div>
-
+ 
       <div class="barra-botoes">
         <span></span>
         <button class="principal" id="salvarAlunoExtra" type="button">Salvar aluno</button>
       </div>
       </div>
     </section>
-
+ 
     <!-- ÁREA DA SECRETARIA -->
     <section id="areaAdmin" style="display:none;">
       <div class="cartao gate" id="gateAdmin">
         <p class="rotulo-secao" style="text-align:center;">Área da secretaria</p>
         <p class="ajuda-secao">Digite a senha de acesso da equipe para ver os cadastros.</p>
-        <input type="text" id="senhaAdmin" placeholder="Senha de acesso">
+        <div class="campo-senha">
+          <input type="password" id="senhaAdmin" placeholder="Senha de acesso">
+          <button type="button" class="btn-olho" id="btnMostrarSenha" aria-label="Mostrar senha">
+            <svg id="iconeOlhoAberto" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            <svg id="iconeOlhoFechado" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a20.6 20.6 0 0 1 5.06-5.94M9.9 4.24A10.94 10.94 0 0 1 12 5c7 0 11 7 11 7a20.6 20.6 0 0 1-2.16 3.19M14.12 14.12a3 3 0 1 1-4.24-4.24"></path><path d="M1 1l22 22"></path></svg>
+          </button>
+        </div>
         <div class="aviso-erro" id="erroSenha" style="max-width:260px;margin:0 auto;"></div>
         <div style="margin-top:10px;">
           <button class="principal" id="btnEntrarAdmin" type="button" style="width:auto;padding:11px 24px;">Entrar</button>
         </div>
       </div>
-
+ 
       <div id="painelAdmin" style="display:none;">
         <div class="metricas">
           <div class="metrica"><div class="num" id="mTotal">0</div><div class="lbl">Cadastros</div></div>
           <div class="metrica"><div class="num" id="mEscolas">0</div><div class="lbl">Escolas</div></div>
           <div class="metrica"><div class="num" id="mLocalidades">0</div><div class="lbl">Localidades</div></div>
         </div>
-
+ 
         <div id="mapaAdmin" style="width:100%;height:280px;border-radius:10px;border:1.5px solid var(--borda);margin-bottom:14px;box-shadow:var(--sombra);"></div>
-
+ 
         <div class="tabela-scroll">
           <table class="registros" id="tabelaRegistros">
             <thead>
@@ -704,7 +771,7 @@
             <tbody id="corpoTabela"></tbody>
           </table>
         </div>
-
+ 
         <div class="rodape-admin">
           <button class="btn-mapa" id="btnExportar" type="button">Exportar CSV</button>
           <button class="btn-mapa" id="btnAtualizar" type="button">Atualizar lista</button>
@@ -712,28 +779,28 @@
         </div>
       </div>
     </section>
-
+ 
   </main>
 </div>
-
+ 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
 (function(){
   var CENTRO_ANCHIETA = [-20.8028, -40.6444];
   var SENHA_ADMIN = "transporte2026";
-
+ 
   // Cole aqui a URL do seu Google Apps Script (termina em /exec), depois de publicá-lo como aplicativo web.
   // Veja o arquivo "google-apps-script-transporte-escolar.gs" com o passo a passo.
   var URL_PLANILHA = "https://script.google.com/macros/s/AKfycbwAlXkWUO-YJ9fJfDXfvFzaQl38iU-KsHvJmU-PCbfWkpeds_dUxV4K8dda2Dt5seX3/exec";
-
+ 
   // matriz oficial: para cada escola, os turnos ofertados e, em cada turno, as séries/anos ofertados
   // gerada a partir da planilha de referência enviada pela Secretaria de Educação
   var MATRIZ_ESCOLAS = {"CEMEI SARA ALMEIDA LIMA": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "CENTRO DE EDUCAÇÃO INFANTIL PINGO DE GENTE - MEPES": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II"]}, "CENTRO DE EDUCAÇÃO INFANTIL XODÓ DAS TITIAS - MEPES": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO"]}, "CMEI BELMIRO ALBERTO ALPOIM": {"Matutino": ["MATERNAL I", "1º PERÍODO", "2º PERÍODO"], "Vespertino": ["MATERNAL II", "1º PERÍODO", "2º PERÍODO"], "Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II"]}, "CMEI ENIDE CORRÊA GUAITOLINI": {"Matutino": ["2º PERÍODO"], "Integral": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "CMEI PADRE JOSE DE ANCHIETA": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "CMEI TIA IRENI AMARAL": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II"]}, "EMEB TIA MARLENE PETRI": {"Vespertino": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"], "Integral": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"]}, "EMEB ALCIDES CECCON": {"Integral": ["2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEB AMARILIS FERNANDES GARCIA": {"Matutino": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"], "Vespertino": ["2º ANO", "3º ANO", "4º ANO", "5º ANO", "6º ANO", "7º ANO", "8º ANO"]}, "EMEB DUAS BARRAS": {"Integral": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEB DULCINEA SILVA LYRIO RUPF": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II"]}, "EMEB JOSEFINA RAMOS NUNES - DONA MULATA": {"Matutino": ["2º ANO", "3º ANO", "4º ANO", "5º ANO", "6º ANO"], "Integral": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"], "Noturno": ["1ª ETAPA", "2ª ETAPA", "3ª ETAPA", "4ª ETAPA", "5ª ETAPA", "6ª ETAPA", "7ª ETAPA", "8ª ETAPA"]}, "EMEB LIMEIRA": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO"]}, "EMEB MARIANA DA PURIFICACAO SIMOES": {"Matutino": ["MATERNAL II", "1º PERÍODO", "2º PERÍODO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEB PROFESSORA PATRICIA FERNANDES ROFFES": {"Matutino": ["1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"], "Vespertino": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEF IRMA TEREZINHA GODOY DE ALMEIDA": {"Matutino": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"], "Vespertino": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEF MANOEL DE PAULA SERRAO": {"Matutino": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"], "Vespertino": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEF OLIVÂNIA": {"Matutino": ["MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEF PROFESSOR TIO LILIU": {"Matutino": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"], "Vespertino": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEF ALIPIO PORTO DA SILVA": {"Integral": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II"]}, "EMEIEF CORREGO DA PRATA": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "EMEIEF ELSON GARCIA": {"Matutino": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"], "Vespertino": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEF ESMERALDA MORACA": {"Integral": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "EMEIEF ESTHER SOARES DA TRINDADE SANTANA": {"Vespertino": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "EMEIEF GOEMBE": {"Matutino": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEF ITAJOBAIA": {"Matutino": ["1º ANO", "2º ANO", "3º ANO", "5º ANO"]}, "EMEIEF ITAPEROROMA BAIXA": {"Integral": ["MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEF LAUROMAR POMPERMAYER PORTO": {"Integral": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "EMEIEF PROFESSORA ADY LYRIO MARCHEZI": {"Integral": ["BERÇÁRIO I", "BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "EMEIEF PROFESSORA EDMA MARIA MEZADRE MULINARI": {"Matutino": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"], "Vespertino": ["MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEF PROFESSORA GENELICE DOS REIS RAMOS HERMES": {"Matutino": ["4º ANO", "5º ANO"], "Vespertino": ["1º ANO", "2º ANO", "3º ANO"]}, "EMEIEF PROFESSORA JOCELINA NOGUEIRA": {"Matutino": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"], "Vespertino": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO"]}, "EMEIEF PROFESSORA MARIA LUIZA FLORES": {"Matutino": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"], "Integral": ["6º ANO", "7º ANO", "8º ANO", "9º ANO"]}, "EMEIEF ROSALINO SIMOES": {"Matutino": ["MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEF SAO MATEUS": {"Integral": ["1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEF SIMPATIA": {"Integral": ["BERÇÁRIO II", "MATERNAL I", "MATERNAL II", "1º PERÍODO", "2º PERÍODO", "1º ANO", "2º ANO", "3º ANO", "4º ANO", "5º ANO"]}, "EMEIEFM PROFª ZULEIKA FLORES DA PURIFICAÇÃO": {"Integral": ["3º ANO", "4º ANO", "5º ANO", "6º ANO", "7º ANO", "8º ANO", "9º ANO"]}};
-
+ 
   // usado como alternativa apenas para escolas que ainda não têm dados cadastrados na planilha
   var TODOS_TURNOS = ['Matutino','Vespertino','Integral','Noturno'];
   var TODAS_SERIES = ['BERÇÁRIO I','BERÇÁRIO II','MATERNAL I','MATERNAL II','1º PERÍODO','2º PERÍODO','1º ANO','2º ANO','3º ANO','4º ANO','5º ANO','6º ANO','7º ANO','8º ANO','9º ANO','1ª ETAPA','2ª ETAPA','3ª ETAPA','4ª ETAPA','5ª ETAPA','6ª ETAPA','7ª ETAPA','8ª ETAPA'];
-
+ 
   function popularSelect(select, opcoes, placeholder){
     select.innerHTML = '';
     var optPlaceholder = document.createElement('option');
@@ -746,15 +813,15 @@
       select.appendChild(opt);
     });
   }
-
+ 
   function atualizarTurnos(idEscola, idTurno, idSerie){
     var escola = document.getElementById(idEscola).value;
     var turnoSelect = document.getElementById(idTurno);
     var serieSelect = document.getElementById(idSerie);
-
+ 
     popularSelect(serieSelect, [], 'Selecione o turno primeiro');
     serieSelect.disabled = true;
-
+ 
     if(!escola){
       popularSelect(turnoSelect, [], 'Selecione a escola primeiro');
       turnoSelect.disabled = true;
@@ -764,12 +831,12 @@
     popularSelect(turnoSelect, turnosDaEscola, 'Selecione o turno');
     turnoSelect.disabled = false;
   }
-
+ 
   function atualizarSeries(idEscola, idTurno, idSerie){
     var escola = document.getElementById(idEscola).value;
     var turno = document.getElementById(idTurno).value;
     var serieSelect = document.getElementById(idSerie);
-
+ 
     if(!turno){
       popularSelect(serieSelect, [], 'Selecione o turno primeiro');
       serieSelect.disabled = true;
@@ -779,12 +846,12 @@
     popularSelect(serieSelect, series, 'Selecione a série/ano');
     serieSelect.disabled = false;
   }
-
+ 
   document.getElementById('escola').addEventListener('change', function(){ atualizarTurnos('escola','turno','serie'); });
   document.getElementById('turno').addEventListener('change', function(){ atualizarSeries('escola','turno','serie'); });
   document.getElementById('escolaExtra').addEventListener('change', function(){ atualizarTurnos('escolaExtra','turnoExtra','serieExtra'); });
   document.getElementById('turnoExtra').addEventListener('change', function(){ atualizarSeries('escolaExtra','turnoExtra','serieExtra'); });
-
+ 
   var toastTimeout = null;
   function mostrarAviso(mensagem, tipo){
     var el = document.getElementById('toastAviso');
@@ -799,10 +866,10 @@
     if(toastTimeout){ clearTimeout(toastTimeout); }
     toastTimeout = setTimeout(function(){ el.classList.remove('mostrar'); }, 6000);
   }
-
+ 
   var mapa, marcador, mapaAdmin;
   var pinoLat = null, pinoLng = null;
-
+ 
   function iniciarMapa(){
     if(mapa) return;
     mapa = L.map('mapa').setView(CENTRO_ANCHIETA, 12);
@@ -815,7 +882,7 @@
     });
     setTimeout(function(){ mapa.invalidateSize(); }, 200);
   }
-
+ 
   function marcarPino(lat, lng){
     pinoLat = lat; pinoLng = lng;
     if(marcador){
@@ -831,7 +898,7 @@
     mapa.setView([lat, lng], Math.max(mapa.getZoom(), 15));
     atualizaStatusPino();
   }
-
+ 
   function atualizaStatusPino(){
     var el = document.getElementById('statusPino');
     if(pinoLat !== null){
@@ -842,20 +909,22 @@
       el.classList.remove('marcado');
     }
   }
-
+ 
   document.getElementById('btnGps').addEventListener('click', function(){
     if(!navigator.geolocation){ mostrarAviso('Seu navegador não permite acessar a localização automaticamente. Marque o ponto manualmente no mapa.'); return; }
     if(window.isSecureContext === false){
       mostrarAviso('Para usar a localização automática, esta página precisa ser aberta com endereço https:// (ou hospedada em um servidor seguro). Marque o ponto manualmente no mapa por enquanto.');
       return;
     }
-    var btn = this; var original = btn.textContent;
-    btn.textContent = 'Localizando...';
+    var btn = this;
+    var titulo = btn.querySelector('.titulo-btn-gps');
+    var original = titulo.textContent;
+    titulo.textContent = 'Localizando...';
     navigator.geolocation.getCurrentPosition(function(pos){
-      btn.textContent = original;
+      titulo.textContent = original;
       marcarPino(pos.coords.latitude, pos.coords.longitude);
     }, function(erro){
-      btn.textContent = original;
+      titulo.textContent = original;
       var msg = 'Não foi possível acessar sua localização. Marque o ponto manualmente no mapa ou use a busca por endereço.';
       if(erro && erro.code === 1){
         msg = 'A permissão de localização foi negada. Verifique nas configurações do navegador/site se a localização está permitida para esta página, ou marque o ponto manualmente no mapa.';
@@ -867,7 +936,7 @@
       mostrarAviso(msg);
     }, { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 });
   });
-
+ 
   document.getElementById('btnBuscar').addEventListener('click', buscarEndereco);
   document.getElementById('buscaEndereco').addEventListener('keydown', function(e){
     if(e.key === 'Enter'){ e.preventDefault(); buscarEndereco(); }
@@ -894,7 +963,7 @@
         mostrarAviso('Não foi possível buscar agora. Marque o ponto direto no mapa.');
       });
   }
-
+ 
   // introdução / termo de responsabilidade
   document.getElementById('irPasso1').addEventListener('click', function(){
     var erro = document.getElementById('erroTermo');
@@ -907,7 +976,7 @@
     document.getElementById('trilha').style.display = 'flex';
     irPara(1);
   });
-
+ 
   // navegação entre passos
   var passoAtual = 1;
   function irPara(passo){
@@ -925,7 +994,7 @@
     passoAtual = passo;
     if(passo === 3){ iniciarMapa(); }
   }
-
+ 
   document.getElementById('irPasso2').addEventListener('click', function(){
     var erro = document.getElementById('erroResponsavel');
     var nomeResp = document.getElementById('nomeResp').value.trim();
@@ -937,9 +1006,9 @@
     erro.classList.remove('mostrar');
     irPara(2);
   });
-
+ 
   document.getElementById('voltarPasso1').addEventListener('click', function(){ irPara(1); });
-
+ 
   document.getElementById('irPasso3').addEventListener('click', function(){
     var erro = document.getElementById('erroAluno');
     var nomeAluno = document.getElementById('nomeAluno').value.trim();
@@ -956,9 +1025,9 @@
     erro.classList.remove('mostrar');
     irPara(3);
   });
-
+ 
   document.getElementById('voltarPasso2').addEventListener('click', function(){ irPara(2); });
-
+ 
   document.getElementById('irPasso4').addEventListener('click', function(){
     if(pinoLat === null){
       mostrarAviso('Toque no mapa para marcar onde fica a residência antes de confirmar.');
@@ -976,11 +1045,11 @@
       irPara(4);
     });
   });
-
+ 
   function gerarId(){
     return Date.now().toString(36) + Math.random().toString(36).slice(2,8);
   }
-
+ 
   function montarRegistro(nomeAluno, escola, turno, serie){
     return {
       id: gerarId(),
@@ -999,7 +1068,7 @@
       lng: pinoLng
     };
   }
-
+ 
   function salvarERegistro(registro, aoSalvar){
     if(URL_PLANILHA.indexOf('COLE_AQUI') === 0){
       mostrarAviso('O formulário ainda não foi conectado à planilha. Veja as instruções para configurar a URL_PLANILHA no arquivo.');
@@ -1019,13 +1088,13 @@
         mostrarAviso('Não foi possível salvar agora. Verifique sua conexão com a internet e tente novamente.');
       });
   }
-
+ 
   function resetarBlocoConfirmacao(){
     document.getElementById('blocoResumo').style.display = '';
     document.getElementById('perguntaMaisFilhos').style.display = '';
     document.getElementById('blocoFinal').style.display = 'none';
   }
-
+ 
   function mostrarResumo(r){
     var el = document.getElementById('resumoFinal');
     var enderecoLinha = escapeHtml(r.rua) + (r.numero ? ', ' + escapeHtml(r.numero) : '');
@@ -1038,13 +1107,13 @@
       '<div><span>Localidade</span><span>' + escapeHtml(r.localidade) + '</span></div>' +
       '<div><span>Coordenadas</span><span>' + r.lat.toFixed(5) + ', ' + r.lng.toFixed(5) + '</span></div>';
   }
-
+ 
   function escapeHtml(s){
     return (s || '').replace(/[&<>"']/g, function(c){
       return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
     });
   }
-
+ 
   // pergunta: mais algum filho?
   document.getElementById('temMaisFilhos').addEventListener('click', function(){
     document.getElementById('trilha').style.display = 'none';
@@ -1055,13 +1124,13 @@
     document.getElementById('erroAlunoExtra').classList.remove('mostrar');
     document.getElementById('passoAlunoExtra').classList.add('ativo');
   });
-
+ 
   document.getElementById('semMaisFilhos').addEventListener('click', function(){
     document.getElementById('blocoResumo').style.display = 'none';
     document.getElementById('perguntaMaisFilhos').style.display = 'none';
     document.getElementById('blocoFinal').style.display = 'block';
   });
-
+ 
   document.getElementById('salvarAlunoExtra').addEventListener('click', function(){
     var erro = document.getElementById('erroAlunoExtra');
     var nomeAlunoExtra = document.getElementById('nomeAlunoExtra').value.trim();
@@ -1083,34 +1152,7 @@
       irPara(4);
     });
   });
-
-  document.getElementById('novoCadastro').addEventListener('click', function(){
-    document.getElementById('nomeResp').value = '';
-    document.getElementById('telResp').value = '';
-    document.getElementById('nomeAluno').value = '';
-    document.getElementById('escola').value = '';
-    atualizarTurnos('escola','turno','serie');
-    document.getElementById('rua').value = '';
-    document.getElementById('numero').value = '';
-    document.getElementById('localidade').value = '';
-    document.getElementById('referencia').value = '';
-    document.getElementById('buscaEndereco').value = '';
-    document.getElementById('nomeAlunoExtra').value = '';
-    document.getElementById('escolaExtra').value = '';
-    atualizarTurnos('escolaExtra','turnoExtra','serieExtra');
-    pinoLat = null; pinoLng = null;
-    if(marcador){ mapa.removeLayer(marcador); marcador = null; }
-    if(mapa){ mapa.setView(CENTRO_ANCHIETA, 12); }
-    atualizaStatusPino();
-    resetarBlocoConfirmacao();
-    document.getElementById('passoAlunoExtra').classList.remove('ativo');
-    document.getElementById('aceiteTermo').checked = false;
-    document.querySelectorAll('.passo').forEach(function(p){ p.classList.remove('ativo'); });
-    document.getElementById('trilha').style.display = 'none';
-    document.getElementById('passoIntro').classList.add('ativo');
-    window.scrollTo(0, 0);
-  });
-
+ 
   // ÁREA DA SECRETARIA
   document.getElementById('btnAdmin').addEventListener('click', function(){
     document.getElementById('trilha').style.display = 'none';
@@ -1120,7 +1162,18 @@
     document.getElementById('subtituloTopo').textContent = 'Consulte os cadastros enviados pelos responsáveis e exporte os dados para montar as rotas.';
     document.getElementById('btnAdmin').style.display = 'none';
   });
-
+ 
+  document.getElementById('btnMostrarSenha').addEventListener('click', function(){
+    var campo = document.getElementById('senhaAdmin');
+    var olhoAberto = document.getElementById('iconeOlhoAberto');
+    var olhoFechado = document.getElementById('iconeOlhoFechado');
+    var mostrando = campo.type === 'text';
+    campo.type = mostrando ? 'password' : 'text';
+    olhoAberto.style.display = mostrando ? '' : 'none';
+    olhoFechado.style.display = mostrando ? 'none' : '';
+    this.setAttribute('aria-label', mostrando ? 'Mostrar senha' : 'Ocultar senha');
+  });
+ 
   document.getElementById('btnEntrarAdmin').addEventListener('click', function(){
     var senha = document.getElementById('senhaAdmin').value;
     var erro = document.getElementById('erroSenha');
@@ -1134,12 +1187,15 @@
     document.getElementById('painelAdmin').style.display = 'block';
     carregarRegistros();
   });
-
+ 
   document.getElementById('sairAdmin').addEventListener('click', function(){
     document.getElementById('areaAdmin').style.display = 'none';
     document.getElementById('gateAdmin').style.display = 'block';
     document.getElementById('painelAdmin').style.display = 'none';
     document.getElementById('senhaAdmin').value = '';
+    document.getElementById('senhaAdmin').type = 'password';
+    document.getElementById('iconeOlhoAberto').style.display = '';
+    document.getElementById('iconeOlhoFechado').style.display = 'none';
     document.getElementById('btnAdmin').style.display = 'block';
     document.getElementById('tituloTopo').textContent = 'Mapeamento do transporte escolar';
     document.getElementById('subtituloTopo').textContent = 'Informe onde o aluno mora para ajudarmos a montar as paradas de ônibus mais próximas de casa.';
@@ -1153,11 +1209,11 @@
       document.getElementById('passoIntro').classList.add('ativo');
     }
   });
-
+ 
   document.getElementById('btnAtualizar').addEventListener('click', carregarRegistros);
-
+ 
   var registrosCache = [];
-
+ 
   function carregarRegistros(){
     if(URL_PLANILHA.indexOf('COLE_AQUI') === 0){
       document.getElementById('corpoTabela').innerHTML = '<tr><td colspan="9">O formulário ainda não foi conectado à planilha. Configure a URL_PLANILHA no arquivo.</td></tr>';
@@ -1175,12 +1231,12 @@
       document.getElementById('corpoTabela').innerHTML = '<tr><td colspan="9">Ainda não há cadastros ou não foi possível carregar agora.</td></tr>';
     });
   }
-
+ 
   function renderizarAdmin(lista){
     document.getElementById('mTotal').textContent = lista.length;
     document.getElementById('mEscolas').textContent = new Set(lista.map(function(r){return r.escola;})).size;
     document.getElementById('mLocalidades').textContent = new Set(lista.map(function(r){return r.localidade;})).size;
-
+ 
     var corpo = document.getElementById('corpoTabela');
     if(!lista.length){
       corpo.innerHTML = '<tr><td colspan="9">Nenhum cadastro enviado ainda.</td></tr>';
@@ -1189,7 +1245,7 @@
         return '<tr><td>' + escapeHtml(r.nomeAluno) + '</td><td>' + escapeHtml(r.escola) + '</td><td>' + escapeHtml(r.turno) + '</td><td>' + escapeHtml(r.serie) + '</td><td>' + escapeHtml(r.rua) + '</td><td>' + escapeHtml(r.numero) + '</td><td>' + escapeHtml(r.localidade) + '</td><td>' + escapeHtml(r.nomeResp) + '</td><td>' + r.lat.toFixed(5) + ', ' + r.lng.toFixed(5) + '</td></tr>';
       }).join('');
     }
-
+ 
     if(!mapaAdmin){
       mapaAdmin = L.map('mapaAdmin').setView(CENTRO_ANCHIETA, 11);
       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -1205,7 +1261,7 @@
     });
     setTimeout(function(){ mapaAdmin.invalidateSize(); }, 150);
   }
-
+ 
   document.getElementById('btnExportar').addEventListener('click', function(){
     if(!registrosCache.length){ mostrarAviso('Não há registros para exportar.'); return; }
     var colunas = ['nomeAluno','escola','turno','serie','rua','numero','localidade','referencia','nomeResp','telResp','lat','lng','dataEnvio'];
@@ -1227,8 +1283,9 @@
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   });
-
+ 
 })();
 </script>
 </body>
 </html>
+ 
